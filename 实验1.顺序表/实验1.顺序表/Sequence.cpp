@@ -1,6 +1,5 @@
 ﻿#include "stdafx.h"
 #include <iostream>
-#include <windows.h>
 #include "Sequence.h"
 #include <malloc.h>
 

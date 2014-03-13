@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <windows.h>
+#include "DeleteXY.h"
 #include "Sequence.h"
 
 using namespace std;
@@ -12,6 +13,7 @@ void Line(int length, int type);
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	DeleteXY xy;
 	Sequence seq;
 	int item;
 	system("title 实验1.顺序表");
@@ -22,7 +24,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		for (int i = 0;; i++)		//输入检测
 		{		
 			Line(55, 1);
-			cout << "1.上机实验题2.1 顺序表基本功能演示" << endl << "2.上机实验题2.2 单链表基本功能演示" << endl << "0.退出程序" << endl;
+			cout << "1.练习题2.2 删除给定值之间的所有元素功能演示" << endl << "2.上机实验题2.1 顺序表基本功能演示" << endl << "0.退出程序" << endl;
 			Line(55, 1);
 			cout << "请选择: ";
 			cin >> item;
@@ -38,13 +40,13 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		switch (item)
 		{
-		case 1:		//顺序表基本功能演示
+		case 1:		//删除给定值之间的所有元素功能演示
+		{	
+			xy.DeleteXYMenu();
+		}break;
+		case 2:		//顺序表基本功能演示
 		{	
 			seq.SequenceMenu();
-		}break;
-		case 2:		//单链表基本功能演示
-		{	
-
 		}break;
 		case 0:		//退出程序
 		{	
