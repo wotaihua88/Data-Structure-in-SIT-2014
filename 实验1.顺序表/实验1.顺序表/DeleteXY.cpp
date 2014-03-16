@@ -67,7 +67,7 @@ void DeleteXY::deleteXY(int x, int y)
 	{
 		if (data[i] >= x && data[i] <= y)
 		{
-			data[i] = 999;		//考虑到时间复杂度，不能使用递归，采用标记特殊值的方法
+			data[i] = 999;		//考虑到时间复杂度，不易使用递归，采用标记特殊值的方法
 		}
 	}
 	cout << "完毕" << endl;
@@ -90,7 +90,7 @@ void DeleteXY::Line(int length, int type)
 	{
 		cout << "-";
 	}
-	if (type = 1)
+	if (type == 1)
 	{
 		cout << endl;
 	}

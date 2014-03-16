@@ -68,7 +68,7 @@ void Line(int length, int type)
 	{
 		cout << "-";
 	}
-	if (type = 1)
+	if (type == 1)
 	{
 		cout << endl;
 	}
