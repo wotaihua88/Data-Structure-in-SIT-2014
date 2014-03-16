@@ -62,12 +62,13 @@ void DeleteXY::initArray()
 
 void DeleteXY::deleteXY(int x, int y)
 {
+	int count = 0;
 	cout << "正在删除元素中大于等于" << x << "小于等于" << y << "的数据...";
 	for (int i = 0; i < 10; i++)
 	{
 		if (data[i] >= x && data[i] <= y)
 		{
-			data[i] = 999;		//考虑到时间复杂度，不易使用递归，采用标记特殊值的方法
+			data[i] = 999;	//考虑到时间复杂度，不易使用递归，采用标记特殊值的方法
 		}
 	}
 	cout << "完毕" << endl;
@@ -79,6 +80,14 @@ void DeleteXY::deleteXY(int x, int y)
 		{
 			cout << data[i] << "   ";
 		}
+		else
+		{
+			count = count + 1;
+		}
+	}
+	if (count == 10)
+	{
+		cout <<"空" ;		//若所有元素被删除则显示空表
 	}
 	cout << endl;
 	Line(55, 1);
