@@ -48,7 +48,8 @@ void Sequence::SequenceMenu()
 	cout << "完毕" << endl;
 	Line(55, 1);
 	cout << "演示6：输出顺序表L的第3个元素..." << endl;
-	cout << "顺序表L的第3个元素为：" << getElem(L, 3, e) << endl << "完毕" << endl;
+	getElem(L, 3, e);
+	cout << "顺序表L的第3个元素为：" << e << endl << "完毕" << endl;
 	Line(55, 1);
 	cout << "演示7：输出元素a的位置..." << endl;
 	cout << "元素a的位置为：" << locateElem(L, 'a') << endl << "完毕" << endl;
