@@ -5,6 +5,7 @@
 #include <iostream>
 #include <windows.h>
 #include "SingleList.h"
+#include "LoopList.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ void Line(int length, int type);
 int _tmain(int argc, _TCHAR* argv[])
 {
 	SingleList single;
+	LoopList loop;
 	int item;
 	system("title 实验2.链表");
 	Line(55, 1);
@@ -44,7 +46,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}break;
 		case 2:		//循环单链表基本功能演示
 		{
-			//seq.SequenceMenu();
+			loop.LoopListMenu();
 		}break;
 		case 0:		//退出程序
 		{

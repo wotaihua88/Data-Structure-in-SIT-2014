@@ -17,7 +17,7 @@ void SingleList::SingleListMenu()
 {
 	cout << "上机实验题2.2 单链表基本功能演示" << endl;
 	Line(55, 1);
-	cout << "演示1：正在初始化单链表H...";
+	cout << "演示1：正在初始化单链表h...";
 	InitList(h);
 	cout << "完毕" << endl;
 	Line(55, 1);
@@ -161,7 +161,7 @@ int SingleList::LocateElem(SingleList *L, char e)
 	}
 }
  
-int	SingleList::ListInsert(SingleList * &L, int i, char e)
+int SingleList::ListInsert(SingleList * &L, int i, char e)
 {
 	int j = 0;
 	SingleList *p = L, *s;
