@@ -46,10 +46,28 @@ void Queue::QueueMenu()
  	cout << "演示5：输出队列q的元素个数..." << endl;
  	cout << "队列q的元素个数为为：" << QueueLength(q) << endl << "完毕" << endl;
  	extra.Line(55, 1);
- 	cout << "演示6：依次进队元素d，e，f...";
- 	enQueue(q, 'd');
- 	enQueue(q, 'e');
- 	enQueue(q, 'f');		//环形队列最多只能存放QMaxSize-1个元素，f无法入队。
+	cout << "演示6：依次进队元素d，e，f..." << endl;
+	//此处有队满事件，做个判断
+	if (enQueue(q, 'd') == false)
+	{
+		cout << "队列满，进队失败" << endl;
+	}
+	else
+	{
+		cout << "d已成功进队" << endl;
+	}
+	if (enQueue(q, 'e') == false)
+	{
+		cout << "队列满，进队失败" << endl;
+	}
+	else
+	{
+		cout << "e已成功进队" << endl;
+	}
+	if (enQueue(q, 'f') == false)		// 环形队列最多只能存放QMaxSize - 1个元素，f无法入队。
+	{
+		cout << "队列满，f进队失败" << endl;
+	}
  	cout << "完毕" << endl;
  	extra.Line(55, 1);
 	cout << "演示7：输出队列q的元素个数..." << endl;
