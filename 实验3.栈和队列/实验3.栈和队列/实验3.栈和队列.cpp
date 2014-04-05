@@ -5,12 +5,14 @@
 #include <iostream>
 #include <windows.h>
 #include "Stack.h"
+#include "Queue.h"
 
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Stack stack, extra;
+	Queue queue;
 	int item;
 	system("title 实验3.栈和队列");
 	extra.Line(55, 1);
@@ -42,7 +44,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}break;
 		case 2:		//顺序环形队列基本功能演示
 		{
-			//loop.LoopListMenu();
+			queue.QueueMenu();
 		}break;
 		case 0:		//退出程序
 		{

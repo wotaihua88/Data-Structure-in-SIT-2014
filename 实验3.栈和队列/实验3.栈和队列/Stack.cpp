@@ -41,7 +41,7 @@ void Stack::StackMenu()
 	cout << "完毕" << endl;
 	Line(55, 1);
 	cout << "演示4：判断栈s是否非空..." << endl;
-	if (StackEmpty(s) == 1)		//对空栈检测函数的return进行检测
+	if (StackEmpty(s) == true)		//对空栈检测函数的return进行检测
 	{
 		cout << "栈s为空" << endl;
 	}
@@ -59,7 +59,7 @@ void Stack::StackMenu()
 	cout << "完毕" << endl;
 	Line(55, 1);
 	cout << "演示7：输出出栈序列..." << endl;
-	while (StackEmpty(s) != 1)
+	while (StackEmpty(s) != true)
 	{
 		Pop(s, e);
 		cout << e;
@@ -100,31 +100,31 @@ int Stack::StackLength(Stack *s)
 	return(s->top + 1);
 }
 
-int Stack::StackEmpty(Stack *s)
+bool Stack::StackEmpty(Stack *s)
 {
 	return(s->top == -1);
 }
 
-int Stack::Push(Stack *&s, ElemType e)
+bool Stack::Push(Stack *&s, ElemType e)
 {
 	if (s->top == MaxSize - 1)
 	{
-		return 0;
+		return false;
 	}
 	s->top++;
 	s->data[s->top] = e;
-	return 1;
+	return true;
 }
 
-int Stack::Pop(Stack *&s, ElemType &e)
+bool Stack::Pop(Stack *&s, ElemType &e)
 {
 	if (s->top == -1)
 	{
-		return 0;
+		return false;
 	}
 	e = s->data[s->top];
 	s->top--;
-	return 1;
+	return true;
 }
 
 void Stack::DispStack(Stack *s)

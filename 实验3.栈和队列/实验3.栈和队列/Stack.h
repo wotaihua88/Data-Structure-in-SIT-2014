@@ -16,9 +16,9 @@ public:
 	void InitStack(Stack *&s);
 	void ClearStack(Stack *&s);
 	int StackLength(Stack *s);
-	int StackEmpty(Stack *s);
-	int Push(Stack *&s, ElemType e);
-	int Pop(Stack *&s, ElemType &e);
+	bool StackEmpty(Stack *s);
+	bool Push(Stack *&s, ElemType e);
+	bool Pop(Stack *&s, ElemType &e);
 	void DispStack(Stack *s);
 	void Line(int length, int type);
 };
