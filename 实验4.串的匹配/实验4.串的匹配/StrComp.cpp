@@ -27,6 +27,11 @@ void StrComp::StrCompMenu()
 	comp.StrAssign(sc2, csc2);
 	extra.Line(65, 1);
 	scc = CompChar(sc1, sc2);
+	cout << "公共字符串 = ";
+	if (scc.length == 0)
+	{
+		cout << "空字符串，无公共字符。" << endl;
+	}
 	comp.DispStr(scc);
 	extra.Line(65, 1);
 }

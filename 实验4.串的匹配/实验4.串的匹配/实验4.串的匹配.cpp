@@ -50,7 +50,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}break;
 		case 3:		//文本串映射加密
 		{
-			
+			ec.EncryptMenu();
 		}break;
 		case 0:		//退出程序
 		{
