@@ -14,8 +14,60 @@ Str::~Str()
 
 void Str::StrMenu()
 {
+	Str s, s1, s2, s3, s4;
 	cout << "上机实验题4.1 顺序串基本功能演示" << endl;
 	Line(55, 1);
+	cout << "演示1：建立串s = \"abcdefghefghijklmn\" 和串s1 = \"xyz\"";
+	StrAssign(s, "abcdefghijklmn");
+	StrAssign(s1, "xyz");
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示2：输出串s..." << endl;
+	DispStr(s);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示3：输出串s的长度..." << endl;
+	cout << "串s的长度为：" << StrLength(s) << endl << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示4：在串s的第9个字符位置插入串s1而产生串s2...";
+	s2 = InsStr(s, 9, s1);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示5：输出串s2..." << endl;
+	DispStr(s2);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示6：删除串s第2个字符开始的5个字符二产生串s2...";
+	s2 = DelStr(s, 2, 5);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示7：输出串s2..." << endl;
+	DispStr(s2);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示8：将串s第2个字符开始的5个字符替换成串s1而产生串s2...";
+	s2 = RepStr(s, 2, 5, s1);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示9：输出串s2..." << endl;
+	DispStr(s2);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示10：提取串s的第2个字符开始的10个字符而产生串s3...";
+	s3 = SubStr(s, 2, 10);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示11：输出串s3..." << endl;
+	DispStr(s3);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示12：将串s1和串s2连接起来而产生串s4...";
+	s4 = Concat(s1, s2);
+	cout << "完毕" << endl;
+	Line(55, 1);
+	cout << "演示13：输出串s4..." << endl;
+	DispStr(s4);
+	cout << "完毕" << endl;
 }
 
 void Str::StrAssign(Str &s, char cstr[])
@@ -103,7 +155,7 @@ Str Str::InsStr(Str s1, int i, Str s2)
 	int j;
 	Str str;
 	str.length = 0;
-	if (i<0 || i>s1.length + 1)
+	if (i <=0 || i > s1.length + 1)
 	{
 		return str;
 	}
@@ -114,6 +166,10 @@ Str Str::InsStr(Str s1, int i, Str s2)
 	for (j = 0; j < s2.length; j++)
 	{
 		str.data[i + j - 1] = s2.data[j];
+	}
+	for (j = i - 1; j < s1.length; j++)
+	{
+		str.data[s2.length + j] = s1.data[j];
 	}
 	str.length = s1.length + s2.length;
 	return str;
