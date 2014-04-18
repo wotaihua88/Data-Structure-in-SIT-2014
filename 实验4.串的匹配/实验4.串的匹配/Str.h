@@ -11,12 +11,12 @@ public:
 	int length;
 
 	void StrMenu();
-	void StrAssign(Str &s, char sctr[]);
+	void StrAssign(Str &s, char cstr[]);
 	void StrCopy(Str &s, Str t);
 	bool StrEqual(Str s, Str t);
 	int StrLength(Str s);
 	Str Concat(Str s, Str t);
-	Str SubStr(Str s, int, int j);
+	Str SubStr(Str s, int i, int j);
 	Str InsStr(Str s1, int i, Str s2);
 	Str DelStr(Str s, int i, int j);
 	Str RepStr(Str s, int i, int j, Str t);
