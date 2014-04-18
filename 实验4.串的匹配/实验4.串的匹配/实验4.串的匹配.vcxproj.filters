@@ -30,6 +30,9 @@
     <ClInclude Include="StrComp.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="StrEncrypt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="StrComp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StrEncrypt.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

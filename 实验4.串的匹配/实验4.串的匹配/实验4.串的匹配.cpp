@@ -6,6 +6,7 @@
 #include <Windows.h>
 #include "Str.h"
 #include "StrComp.h"
+#include "StrEncrypt.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	Str str, extra;
 	StrComp strcomp;
+	StrEncrypt ec;
 	int item;
 	system("title 实验4.串的匹配");
 	extra.Line(65, 1);
@@ -48,7 +50,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}break;
 		case 3:		//文本串映射加密
 		{
-			//queue.QueueMenu();
+			
 		}break;
 		case 0:		//退出程序
 		{
