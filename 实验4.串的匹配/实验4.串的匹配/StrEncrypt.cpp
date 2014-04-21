@@ -14,28 +14,28 @@ StrEncrypt::~StrEncrypt()
 
 void StrEncrypt::EncryptMenu()
 {
-	char str[StrMaxSize];
+	char source[StrMaxSize];
 	cout << "上机实验题4.4 文本串映射加密" << endl;
 	extra.Line(65, 1);
 	cout << "本次加密使用的字母映射表为：" << endl;
 	cout << "a b c d e f g h i j k l m n o p q r s t u v w x y z" << endl;
 	cout << "n g z q t c o b m u h e l k p d a w x f y i v r s j" << endl;
-	ec.StrAssign(A, "abcdefghijklmnopqrstuvwxyz");
-	ec.StrAssign(B, "ngzqtcobmuhelkpdawxfyivrsj");
+	A.StrAssign(A, "abcdefghijklmnopqrstuvwxyz");
+	B.StrAssign(B, "ngzqtcobmuhelkpdawxfyivrsj");
 	extra.Line(65, 1);
 	cout << "输入原文串：";
 	fflush(stdin);		//清空输入缓冲区，避免程序刷屏BUG
-	cin.get(str, StrMaxSize);
-	ec.StrAssign(p, str);
+	cin.get(source, StrMaxSize);
+	text.StrAssign(text, source);
 	extra.Line(65, 1);
 	cout << "原文串：";
-	ec.DispStr(p);
-	q = EnCrypt(p);
+	text.DispStr(text);
+	encryptxt = EnCrypt(text);
 	cout << "加密串：";
-	ec.DispStr(q);
+	text.DispStr(encryptxt);
 	cout << "解密串：";
-	p = UnEncrypt(q);
-	ec.DispStr(p);
+	unencryptxt = UnEncrypt(encryptxt);
+	text.DispStr(unencryptxt);
 	extra.Line(65,1);
 }
 

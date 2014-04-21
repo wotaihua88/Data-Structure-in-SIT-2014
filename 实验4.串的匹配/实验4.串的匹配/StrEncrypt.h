@@ -7,7 +7,7 @@ public:
 	StrEncrypt();
 	~StrEncrypt();
 
-	Str A, B, p, q, ec, extra;
+	Str A, B, text, encryptxt, unencryptxt, extra;
 
 	void EncryptMenu();
 	Str EnCrypt(Str p);
