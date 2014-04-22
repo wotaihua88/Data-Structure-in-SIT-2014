@@ -16,14 +16,16 @@ void StrComp::StrCompMenu()
 {
 	Str sc1, sc2, scc;
 	char csc1[StrMaxSize], csc2[StrMaxSize];
+	fflush(stdin);		//清空输入缓冲区，避免程序刷屏BUG
 	cout << "练习题4 求公共字符串" << endl;
 	extra.Line(65, 1);
 	cout << "请分别输入用于比对的字符串s1、s2：" << endl;
 	cout << "s1 = ";
-	cin >> csc1;
+	cin.get(csc1, StrMaxSize);
 	comp.StrAssign(sc1, csc1);
+	fflush(stdin);
 	cout << "s2 = ";
-	cin >> csc2;
+	cin.get(csc2, StrMaxSize);
 	comp.StrAssign(sc2, csc2);
 	extra.Line(65, 1);
 	scc = CompChar(sc1, sc2);

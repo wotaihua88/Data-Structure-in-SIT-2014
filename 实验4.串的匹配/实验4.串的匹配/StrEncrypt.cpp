@@ -15,6 +15,7 @@ StrEncrypt::~StrEncrypt()
 void StrEncrypt::EncryptMenu()
 {
 	char source[StrMaxSize];
+	fflush(stdin);		//清空输入缓冲区，避免程序刷屏BUG
 	cout << "上机实验题4.4 文本串映射加密" << endl;
 	extra.Line(65, 1);
 	cout << "本次加密使用的字母映射表为：" << endl;
@@ -24,7 +25,6 @@ void StrEncrypt::EncryptMenu()
 	B.StrAssign(B, "ngzqtcobmuhelkpdawxfyivrsj");
 	extra.Line(65, 1);
 	cout << "输入原文串：";
-	fflush(stdin);		//清空输入缓冲区，避免程序刷屏BUG
 	cin.get(source, StrMaxSize);
 	text.StrAssign(text, source);
 	extra.Line(65, 1);
