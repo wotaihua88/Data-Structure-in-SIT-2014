@@ -41,22 +41,12 @@ void StrEncrypt::EncryptMenu()
 
 Str StrEncrypt::EnCrypt(Str p)
 {
-	int i = 0, j;
 	Str q;
-	while (i < p.length)
-	{
-		for (j = 0; p.data[i] != A.data[j]; j++);
-		if (j >= p.length)
-		{
-			q.data[i] = p.data[i];
-		}
-		else
-		{
-			q.data[i] = B.data[j];
-		}
-		i++;
-	}
 	q.length = p.length;
+	for (int i = 0; i < p.length; i++)
+	{
+		q.data[i] = islower(p.data[i]) ? B.data[p.data[i] - 'a'] : p.data[i];		//p串是否小写（存在映射值），存在则映射，不存在则直接赋值给q串
+	}
 	return q;
 }
 
