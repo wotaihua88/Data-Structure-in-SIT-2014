@@ -60,7 +60,7 @@ Str StrEncrypt::UnEncrypt(Str q)
 		//p.data[i] = islower(q.data[i])?
 		for (int j = 0; j < q.length; j++)
 		{
-			p.data[i]=
+		//	p.data[i]=
 		}
 	}
 	return p;
