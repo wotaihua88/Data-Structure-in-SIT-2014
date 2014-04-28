@@ -52,33 +52,21 @@ Str StrEncrypt::EnCrypt(Str p)
 
 Str StrEncrypt::UnEncrypt(Str q)
 {
+	int i = 0, j;
 	Str p;
-	p.length = q.length;
-	for (int i = 0; i < q.length; i++)
+	while (i < q.length)
 	{
-	//	p.data[i] = A.data[q.data[i]];
-		//p.data[i] = islower(q.data[i])?
-		for (int j = 0; j < q.length; j++)
+		for (j = 0; q.data[i] != B.data[j]; j++);
+		if (j >= B.length)
 		{
-		//	p.data[i]=
+			p.data[i] = q.data[i];
 		}
+		else
+		{
+			p.data[i] = A.data[j];
+		}
+		i++;
 	}
+	p.length = q.length;
 	return p;
-// 	int i = 0, j;
-// 	Str p;
-// 	while (i < q.length)
-// 	{
-// 		for (j = 0; q.data[i] != B.data[j]; j++);
-// 		if (j >= B.length)
-// 		{
-// 			p.data[i] = q.data[i];
-// 		}
-// 		else
-// 		{
-// 			p.data[i] = A.data[j];
-// 		}
-// 		i++;
-// 	}
-// 	p.length = q.length;
-// 	return p;
 }
