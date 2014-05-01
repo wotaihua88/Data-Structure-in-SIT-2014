@@ -37,7 +37,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		switch (item)
 		{
-		case 1:		//求公共字符串
+		case 1:		//二叉树的各种基本运算
 		{
 			tree.TreeMenu();
 		}break;

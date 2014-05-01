@@ -20,7 +20,8 @@ void BinaryTree::TreeMenu()
 	cout << "上机实验题7.1 二叉树的各种基本运算" << endl;
 	Line(65, 1);
 	cout << "本次实验使用教材202页上机实验题7.1所提供的二叉树。" << endl;
-	CreateBTNode(b, "A(B(D,E(H(J,K(L,M(,N))))),C(F,G(,I)))");
+	Line(65, 1);
+	CreateBTNode(b, "A(B(D,E(H(J,K(L,M(N))))),C(F,G(I)))");
 	cout << "演示1：输出二叉树b..." << endl;
 	DispBTNode(b);
 	cout << endl << "完毕" << endl;
@@ -59,6 +60,19 @@ void BinaryTree::TreeMenu()
 	DispLeaf(b);
 	cout << endl << "完毕" << endl;
 	Line(65, 1);
+	cout << "演示6：输出二叉树b的先序遍历序列..." << endl;
+	PreOrder(b);
+	cout << endl << "完毕" << endl;
+	Line(65, 1);
+	cout << "演示7：输出二叉树b的中序遍历序列..." << endl;
+	InOrder(b);
+	cout << endl << "完毕" << endl;
+	Line(65, 1);
+	cout << "演示8：输出二叉树b的后序遍历序列..." << endl;
+	PostOrder(b);
+	cout << endl << "完毕" << endl;
+	Line(65, 1);
+
 }
 
 void BinaryTree::CreateBTNode(BinaryTree *&b, char *str)
@@ -197,6 +211,33 @@ void BinaryTree::DispLeaf(BinaryTree *b)
 			DispLeaf(b->lchild);
 			DispLeaf(b->rchild);
 		}
+	}
+}
+
+void BinaryTree::PreOrder(BinaryTree *b)
+{
+	if (b != NULL){
+		cout << b->data;
+		PreOrder(b->lchild);
+		PreOrder(b->rchild);
+	}
+}
+
+void BinaryTree::InOrder(BinaryTree *b)
+{
+	if (b != NULL){
+		InOrder(b->lchild);
+		cout << b->data;
+		InOrder(b->rchild);
+	}
+}
+
+void BinaryTree::PostOrder(BinaryTree *b)
+{
+	if (b != NULL){
+		PostOrder(b->lchild);
+		PostOrder(b->rchild);
+		cout << b->data;
 	}
 }
 

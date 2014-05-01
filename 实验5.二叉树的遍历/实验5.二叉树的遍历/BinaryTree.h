@@ -18,6 +18,9 @@ public:
 	int Nodes(BinaryTree *b);
 	int LeafNodes(BinaryTree *b);
 	void DispLeaf(BinaryTree *b);
+	void PreOrder(BinaryTree *b);
+	void InOrder(BinaryTree *b);
+	void PostOrder(BinaryTree *b);
 	void Line(int length, int type);
 };
 
