@@ -41,6 +41,10 @@ int _tmain(int argc, _TCHAR* argv[])
 		{
 			tree.TreeMenu();
 		}break;
+		case 0:		//退出程序
+		{
+			return 0;
+		}break;
 		default:
 		{
 			break;
