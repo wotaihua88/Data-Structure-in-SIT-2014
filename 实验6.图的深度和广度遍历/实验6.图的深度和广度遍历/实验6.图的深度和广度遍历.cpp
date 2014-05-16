@@ -24,7 +24,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		for (int i = 0;; i++)		//输入检测
 		{
 			extra.Line(70, 1);
-			cout << "1.上机实验题8.1 邻接矩阵与邻接表的存储" << endl <<  "2.上机实验题8.2 图的遍历运算" << "0.退出程序" << endl;
+			cout << "1.上机实验题8.1 邻接矩阵与邻接表的存储" << endl <<  "2.上机实验题8.2 图的遍历运算" << endl << "0.退出程序" << endl;
 			extra.Line(70, 1);
 			cout << "请选择: ";
 			cin >> item;
