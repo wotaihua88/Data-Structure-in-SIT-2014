@@ -6,6 +6,7 @@
 #include <Windows.h>
 #include "Graph.h"
 #include "Convert.h"
+#include "Traversal.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	Graph extra;
 	Convert con;
+	Traversal tra;
 	int item;
 	system("title 实验6.图的深度和广度遍历");
 	extra.Line(70, 1);
@@ -44,7 +46,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}break;
 		case 2:		//图的遍历运算
 		{
-
+			tra.TravelMenu();
 		}break;
 		case 0:		//退出程序
 		{

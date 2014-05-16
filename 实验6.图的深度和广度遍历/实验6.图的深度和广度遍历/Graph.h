@@ -51,10 +51,11 @@ class Graph
 public:
 	Graph();
 	~Graph();
-	void MatToList(MGraph g, ALGraph *&G);		//将不带权图的邻接矩阵g转换成邻接表G
-	void ListToMat(ALGraph *G, MGraph *&g);		//将不带权图的邻接表G转换成邻接矩阵g
-	void DispMat(MGraph g);						//输出不带权图的邻接矩阵g
-	void DispAdj(ALGraph *G);					//输出不带权图的邻接表G
+	//不带权图因实验中未被使用，这里不进行代码实现，可以使用带权函数去除info位进行改造
+// 	void MatToList(MGraph g, ALGraph *&G);		//将不带权图的邻接矩阵g转换成邻接表G
+// 	void ListToMat(ALGraph *G, MGraph *&g);		//将不带权图的邻接表G转换成邻接矩阵g
+// 	void DispMat(MGraph g);						//输出不带权图的邻接矩阵g
+// 	void DispAdj(ALGraph *G);					//输出不带权图的邻接表G
 	void MatToListW(MGraph g, ALGraph *&G);		//将带权图的邻接矩阵g转换成邻接表G
 	void ListToMatW(ALGraph *G, MGraph &g);	//将带权图的邻接表G转换成邻接矩阵g
 	void DispMatW(MGraph g);					//输出带权图的邻接矩阵g
