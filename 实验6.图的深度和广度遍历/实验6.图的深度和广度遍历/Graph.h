@@ -1,49 +1,49 @@
-//Õâ¸öÎÄ¼şÄÚ°üº¬ÁË±¾´ÎÊµÑéÖĞÊ¹ÓÃµ½µÄ¶à¸ö±íÊ¾ÀàĞÍ
+ï»¿//è¿™ä¸ªæ–‡ä»¶å†…åŒ…å«äº†æœ¬æ¬¡å®éªŒä¸­ä½¿ç”¨åˆ°çš„å¤šä¸ªè¡¨ç¤ºç±»å‹
 
 #pragma once
 typedef int InfoType;
-#define MAXV 100		//×î´ó¶¥µã¸öÊı
-#define	INF 32767		//INF±íÊ¾¡Ş
+#define MAXV 100		//æœ€å¤§é¡¶ç‚¹ä¸ªæ•°
+#define	INF 32767		//INFè¡¨ç¤ºâˆ
 
-//ÒÔÏÂ¶¨ÒåÁÚ½Ó¾ØÕóÀàĞÍ
-class VertexType				//¶¥µãÀàĞÍ
+//ä»¥ä¸‹å®šä¹‰é‚»æ¥çŸ©é˜µç±»å‹
+class VertexType				//é¡¶ç‚¹ç±»å‹
 {
 public:
-	int no;						//¶¥µã±àºÅ
-	InfoType info;				//¶¥µãÆäËûĞÅÏ¢
+	int no;						//é¡¶ç‚¹ç¼–å·
+	InfoType info;				//é¡¶ç‚¹å…¶ä»–ä¿¡æ¯
 };
 
-class MGraph					//Í¼µÄÁÚ½Ó¾ØÕóÀàĞÍ
+class MGraph					//å›¾çš„é‚»æ¥çŸ©é˜µç±»å‹
 {
 public:
-	int edges[MAXV][MAXV];		//ÁÚ½Ó¾ØÕó
-	int n, e;					//¶¨µãÊı£¬±ßÊı
-	VertexType vexs[MAXV];		//´æ·Å¶¥µãĞÅÏ¢
+	int edges[MAXV][MAXV];		//é‚»æ¥çŸ©é˜µ
+	int n, e;					//å®šç‚¹æ•°ï¼Œè¾¹æ•°
+	VertexType vexs[MAXV];		//å­˜æ”¾é¡¶ç‚¹ä¿¡æ¯
 };
 
-//ÒÔÏÂ¶¨ÒåÁÚ½Ó±íÀàĞÍ
-class ArcNode					//±ßµÄ½á¹¹ÀàĞÍ
+//ä»¥ä¸‹å®šä¹‰é‚»æ¥è¡¨ç±»å‹
+class ArcNode					//è¾¹çš„ç»“æ„ç±»å‹
 {
 public:
-	int adjvex;					//¸Ã±ßµÄÖÕµãÎ»ÖÃ
-	ArcNode *nextarc;			//Ö¸ÏòÏÂÒ»Ìõ±ßµÄÖ¸Õë
-	InfoType info;				//¸Ã±ßµÄÏà¹ØĞÅÏ¢£¬ÕâÀïÓÃÓÚ´æ·ÅÈ¨Öµ
+	int adjvex;					//è¯¥è¾¹çš„ç»ˆç‚¹ä½ç½®
+	ArcNode *nextarc;			//æŒ‡å‘ä¸‹ä¸€æ¡è¾¹çš„æŒ‡é’ˆ
+	InfoType info;				//è¯¥è¾¹çš„ç›¸å…³ä¿¡æ¯ï¼Œè¿™é‡Œç”¨äºå­˜æ”¾æƒå€¼
 };
 
 typedef int Vertex;	
-class VNode						//ÁÚ½Ó±íÍ·½ÚµãµÄÀàĞÍ
+class VNode						//é‚»æ¥è¡¨å¤´èŠ‚ç‚¹çš„ç±»å‹
 {
 public:
-	Vertex data;				//¶¥µãĞÅÏ¢
-	ArcNode *firstarc;			//Ö¸ÏòµÚÒ»Ìõ±ß
+	Vertex data;				//é¡¶ç‚¹ä¿¡æ¯
+	ArcNode *firstarc;			//æŒ‡å‘ç¬¬ä¸€æ¡è¾¹
 };
 
-typedef VNode AdjList[MAXV];	//AdjlistÊÇÁÚ½Ó±íÀàĞÍ
-class ALGraph					//Í¼µÄÁÚ½Ó±íÀàĞÍ
+typedef VNode AdjList[MAXV];	//Adjlistæ˜¯é‚»æ¥è¡¨ç±»å‹
+class ALGraph					//å›¾çš„é‚»æ¥è¡¨ç±»å‹
 {
 public:
-	AdjList adjlist;			//ÁÚ½Ó±í
-	int n, e;					//Í¼ÖĞ¶¨µãÊınºÍ±ßÊıe
+	AdjList adjlist;			//é‚»æ¥è¡¨
+	int n, e;					//å›¾ä¸­å®šç‚¹æ•°nå’Œè¾¹æ•°e
 };
 
 class Graph
@@ -51,14 +51,13 @@ class Graph
 public:
 	Graph();
 	~Graph();
-	void MatToList(MGraph g, ALGraph *&G);		//½«²»´øÈ¨Í¼µÄÁÚ½Ó¾ØÕóg×ª»»³ÉÁÚ½Ó±íG
-	void ListToMat(ALGraph *G, MGraph *&g);		//½«²»´øÈ¨Í¼µÄÁÚ½Ó±íG×ª»»³ÉÁÚ½Ó¾ØÕóg
-	void DispMat(MGraph g);						//Êä³ö²»´øÈ¨Í¼µÄÁÚ½Ó¾ØÕóg
-	void DispAdj(ALGraph *G);					//Êä³ö²»´øÈ¨Í¼µÄÁÚ½Ó±íG
-	void MatToListW(MGraph g, ALGraph *&G);		//½«´øÈ¨Í¼µÄÁÚ½Ó¾ØÕóg×ª»»³ÉÁÚ½Ó±íG
-	void ListToMatW(ALGraph *G, MGraph &g);	//½«´øÈ¨Í¼µÄÁÚ½Ó±íG×ª»»³ÉÁÚ½Ó¾ØÕóg
-	void DispMatW(MGraph g);					//Êä³ö´øÈ¨Í¼µÄÁÚ½Ó¾ØÕóg
-	void DispAdjW(ALGraph *G);					//Êä³ö´øÈ¨Í¼µÄÁÚ½Ó±íG
-	void GraphMenu();
+	void MatToList(MGraph g, ALGraph *&G);		//å°†ä¸å¸¦æƒå›¾çš„é‚»æ¥çŸ©é˜µgè½¬æ¢æˆé‚»æ¥è¡¨G
+	void ListToMat(ALGraph *G, MGraph *&g);		//å°†ä¸å¸¦æƒå›¾çš„é‚»æ¥è¡¨Gè½¬æ¢æˆé‚»æ¥çŸ©é˜µg
+	void DispMat(MGraph g);						//è¾“å‡ºä¸å¸¦æƒå›¾çš„é‚»æ¥çŸ©é˜µg
+	void DispAdj(ALGraph *G);					//è¾“å‡ºä¸å¸¦æƒå›¾çš„é‚»æ¥è¡¨G
+	void MatToListW(MGraph g, ALGraph *&G);		//å°†å¸¦æƒå›¾çš„é‚»æ¥çŸ©é˜µgè½¬æ¢æˆé‚»æ¥è¡¨G
+	void ListToMatW(ALGraph *G, MGraph &g);	//å°†å¸¦æƒå›¾çš„é‚»æ¥è¡¨Gè½¬æ¢æˆé‚»æ¥çŸ©é˜µg
+	void DispMatW(MGraph g);					//è¾“å‡ºå¸¦æƒå›¾çš„é‚»æ¥çŸ©é˜µg
+	void DispAdjW(ALGraph *G);					//è¾“å‡ºå¸¦æƒå›¾çš„é‚»æ¥è¡¨G
 	void Line(int length, int type);
 };

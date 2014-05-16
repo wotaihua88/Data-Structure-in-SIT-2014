@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Graph.h"
 #include <iostream>
 #include <malloc.h>
@@ -68,7 +68,7 @@ void Graph::DispMatW(MGraph g)
 	for (i = 0; i < g.n; i++){
 		for (j = 0; j < g.n; j++){
 			if (g.edges[i][j] == INF){
-				cout << setw(3) << "¡Þ";
+				cout << setw(3) << "âˆž";
 			}
 			else{
 				cout << setw(3) << g.edges[i][j];
@@ -91,52 +91,6 @@ void Graph::DispAdjW(ALGraph *G)
 		}
 		cout << endl;
 	}
-}
-
-void Graph::GraphMenu()
-{
-
-	int i, j;
-	MGraph g, g1;
-	ALGraph *G;
-	int A[MAXV][6] = {  {  0,  5, INF, 7, INF, INF },
-						{ INF, 0,  4, INF,INF, INF },
-						{  8, INF, 0, INF,INF,  9  },
-						{ INF,INF, 5,  0, INF,  6  },
-						{ INF,INF,INF, 5,  0,  INF },
-						{  3, INF,INF,INF, 1,   0  } };
-	g.n = 6;
-	g.e = 10;
-	cout << "ÉÏ»úÊµÑéÌâ8.1 ÁÚ½Ó¾ØÕóÓëÁÚ½Ó±íµÄ´æ´¢" << endl;
-	Line(70, 1);
-	cout << "ÑÝÊ¾1£º½¨Á¢ÓÐÏòÍ¼GµÄÁÚ½Ó¾ØÕó£¬²¢Êä³ö..." << endl;
-	cout << "ÕýÔÚ½¨Á¢...";
-	for (i = 0; i < g.n; i++){
-		for (j = 0; j < g.n; j++){
-			g.edges[i][j] = A[i][j];
-		}
-	}
-	cout << "Íê±Ï" << endl;
-	Line(70, 1);
-	cout << "ÓÐÏòÍ¼GµÄÁÚ½Ó¾ØÕóÎª:" << endl;
-	DispMatW(g);
-	Line(70, 1);
-	cout << "ÑÝÊ¾2£º½«ÁÚ½Ó¾ØÕó×ª»»³ÉÁÚ½Ó±í£¬²¢Êä³ö..." << endl;
-	cout << "ÕýÔÚ×ª»»...";
-	MatToListW(g, G);
-	cout << "Íê±Ï" << endl;
-	Line(70, 1);
-	cout << "ÓÐÏòÍ¼GµÄÁÚ½Ó±íÎª:" << endl;
-	DispAdjW(G);
-	Line(70, 1);
-	cout << "ÑÝÊ¾3£º½«ÁÚ½Ó±í×ª»»³ÉÁÚ½Ó¾ØÕó£¬²¢Êä³ö..." << endl;
-	cout << "ÕýÔÚ×ª»»...";
-	ListToMatW(G,g1);
-	cout << "Íê±Ï" << endl;
-	Line(70, 1);
-	cout << "ÓÐÏòÍ¼GµÄÁÚ½Ó±íÎª:" << endl;
-	DispMatW(g1);
-	Line(70, 1);
 }
 
 void Graph::Line(int length, int type)

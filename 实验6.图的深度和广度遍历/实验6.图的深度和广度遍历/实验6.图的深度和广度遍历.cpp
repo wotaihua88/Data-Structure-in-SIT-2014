@@ -5,12 +5,14 @@
 #include <iostream>
 #include <Windows.h>
 #include "Graph.h"
+#include "Convert.h"
 
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Graph extra, graph;
+	Graph extra;
+	Convert con;
 	int item;
 	system("title 实验6.图的深度和广度遍历");
 	extra.Line(70, 1);
@@ -38,7 +40,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		{
 		case 1:		//邻接矩阵与邻接表的存储
 		{
-			graph.GraphMenu();
+			con.ConvertMenu();
 		}break;
 		case 2:		//图的遍历运算
 		{
