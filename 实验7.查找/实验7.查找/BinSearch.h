@@ -1,10 +1,11 @@
 ﻿#pragma once
-#define MAXL 100
-typedef int KeyType;
-typedef char InfoType[10];
 
 class BinSearch
 {
+	#define MAXL 100
+	typedef int KeyType;
+	typedef char InfoType[10];
+
 public:
 	BinSearch();
 	~BinSearch();

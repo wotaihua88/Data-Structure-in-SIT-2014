@@ -5,12 +5,14 @@
 #include <iostream>
 #include <Windows.h>
 #include "BinSearch.h"
+#include "BSTree.h"
 
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	BinSearch extra, bin;
+	BSTree bst;
 	int item;
 	system("title 实验7.查找");
 	extra.Line(70, 1);
@@ -42,7 +44,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}break;
 		case 2:		//二叉排序树的基本运算
 		{
-			//tra.TravelMenu();
+			bst.BSTreeMenu();
 		}break;
 		case 3:		//哈希表的相关运算
 		{
