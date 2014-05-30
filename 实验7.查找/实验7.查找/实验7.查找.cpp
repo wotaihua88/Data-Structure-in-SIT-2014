@@ -6,6 +6,7 @@
 #include <Windows.h>
 #include "BinSearch.h"
 #include "BSTree.h"
+#include "Hash.h"
 
 using namespace std;
 
@@ -13,31 +14,27 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	BinSearch extra, bin;
 	BSTree bst;
+	Hash hash;
 	int item;
 	system("title 实验7.查找");
 	extra.Line(70, 1);
-	for (int main = 0;; main++)
-	{
+	for (int main = 0;; main++){
 		cout << "请选择演示项目: " << endl;
-		for (int i = 0;; i++)		//输入检测
-		{
+		for (int i = 0;; i++){
 			extra.Line(70, 1);
 			cout << "1.上机实验题9.2 顺序表折半查找应用" << endl << "2.上机实验题9.4 二叉排序树的基本运算" << endl << "3.上机实验题 9.8 哈希表的相关运算" << endl << "0.退出程序" << endl;
 			extra.Line(70, 1);
 			cout << "请选择: ";
 			cin >> item;
 			extra.Line(70, 1);
-			if (item != 1 && item != 2 && item != 3 && item != 0)
-			{
+			if (item != 1 && item != 2 && item != 3 && item != 0){
 				cout << "输入错误，请重新输入！" << endl;
 			}
-			else
-			{
+			else{
 				break;
 			}
 		}
-		switch (item)
-		{
+		switch (item){
 		case 1:		//顺序表折半查找应用
 		{
 			bin.BinMenu();
@@ -48,7 +45,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}break;
 		case 3:		//哈希表的相关运算
 		{
-			//
+			hash.HashMenu();
 		}break;
 		case 0:		//退出程序
 		{

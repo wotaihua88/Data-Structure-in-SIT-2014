@@ -13,6 +13,5 @@ public:
 	BSTree *lchild, *rchild;
 
 	void BSTree::BSTreeMenu();
-
 };
 
