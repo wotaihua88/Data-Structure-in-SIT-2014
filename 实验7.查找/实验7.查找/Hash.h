@@ -11,12 +11,11 @@ public:
 	Hash();
 	~Hash();
 
-	typedef struct
-	{
-		KeyType key;
-		InfoTypeHA data;
-		int count;
-	}HashTable[MaxSize];
+	KeyType key;
+	InfoTypeHA data;
+	int count;
+
+	typedef Hash HashTable[MaxSize];
 
 	BinSearch extra;
 
