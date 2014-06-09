@@ -4,12 +4,14 @@
 #include "stdafx.h"
 #include <iostream>
 #include "Bubble.h"
+#include "Select.h"
 
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Bubble bub,extra;
+	Select sel;
 	int item;
 	system("title 实验8.排序");
 	extra.Line(70, 1);
@@ -36,7 +38,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}break;
 		case 2:		//直接选择排序算法的应用
 		{
-			//bst.BSTreeMenu();
+			sel.SelectMenu();
 		}break;
 		case 0:		//退出程序
 		{

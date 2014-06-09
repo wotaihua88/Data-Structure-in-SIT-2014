@@ -16,7 +16,7 @@ void Bubble::BubbleMenu()
 {
 	int i, n = 10;
 	Bubble R[MaxSize];
-	KeyType a[] = { 0, 1, 7, 2, 5, 4, 3, 6, 8, 9 };
+	KeyType a[] = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
 	for (i = 0; i < n; i++){
 		R[i].key = a[i];
 	}
