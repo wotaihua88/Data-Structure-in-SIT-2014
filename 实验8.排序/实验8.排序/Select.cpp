@@ -39,7 +39,6 @@ void Select::SelectMenu()
 	extra.Line(70, 1);
 }
 
-
 void Select::SelectSort(Select R[], int n)
 {
 	int i, j, k, l;

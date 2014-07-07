@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "CardGame.h"
+#include "Sort.h"
 #include <stdlib.h>
 #include <iostream>
 
@@ -11,6 +12,7 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	CardGame extra, cardMenu;
+	Sort sortMenu;
 	int item;
 	system("title 课程设计.纸牌游戏.各种排序.汉诺塔问题");
 	extra.Line(70, 1);
@@ -35,9 +37,9 @@ int _tmain(int argc, _TCHAR* argv[])
 		{
 			cardMenu.CardMenu();
 		}break;
-		case 2:		//各种排
+		case 2:		//各种排序
 		{
-			//sel.SelectMenu();
+			sortMenu.SortMenu();
 		}break;
 		case 3:		//汉诺塔问题
 		{
