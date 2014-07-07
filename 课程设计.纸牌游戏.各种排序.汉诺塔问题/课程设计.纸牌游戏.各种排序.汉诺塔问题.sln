@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "课程设计.纸牌游戏.各种排序.汉诺塔问题", "课程设计.纸牌游戏.各种排序.汉诺塔问题\课程设计.纸牌游戏.各种排序.汉诺塔问题.vcxproj", "{BBD65662-4937-42FE-B3BC-BA8BED0F262F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBD65662-4937-42FE-B3BC-BA8BED0F262F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BBD65662-4937-42FE-B3BC-BA8BED0F262F}.Debug|Win32.Build.0 = Debug|Win32
+		{BBD65662-4937-42FE-B3BC-BA8BED0F262F}.Release|Win32.ActiveCfg = Release|Win32
+		{BBD65662-4937-42FE-B3BC-BA8BED0F262F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
