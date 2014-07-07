@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "CardGame.h"
 #include "Sort.h"
+#include "PopHanoi.h"
 #include <stdlib.h>
 #include <iostream>
 
@@ -13,6 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	CardGame extra, cardMenu;
 	Sort sortMenu;
+	PopHanoi hanoiMenu;
 	int item;
 	system("title 课程设计.纸牌游戏.各种排序.汉诺塔问题");
 	extra.Line(70, 1);
@@ -43,7 +45,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}break;
 		case 3:		//汉诺塔问题
 		{
-			//sel.SelectMenu();
+			hanoiMenu.HanoiMenu();
 		}break;
 		case 0:		//退出程序
 		{

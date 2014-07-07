@@ -84,6 +84,7 @@
     <ClInclude Include="Bubble.h" />
     <ClInclude Include="CardGame.h" />
     <ClInclude Include="Insert.h" />
+    <ClInclude Include="PopHanoi.h" />
     <ClInclude Include="Select.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="stdafx.h" />
@@ -93,6 +94,7 @@
     <ClCompile Include="Bubble.cpp" />
     <ClCompile Include="CardGame.cpp" />
     <ClCompile Include="Insert.cpp" />
+    <ClCompile Include="PopHanoi.cpp" />
     <ClCompile Include="Select.cpp" />
     <ClCompile Include="Sort.cpp" />
     <ClCompile Include="stdafx.cpp">
