@@ -26,7 +26,7 @@ void Bubble::BubbleSort(Bubble R[], int n)
 				exchange = 1;
 			}
 		}
-		cout << "次数 " << i << " :";
+		cout << "次数 " << i + 1 << " :";
 		for (k = 0; k < n; k++){
 			cout << " " << R[k].key;
 		}

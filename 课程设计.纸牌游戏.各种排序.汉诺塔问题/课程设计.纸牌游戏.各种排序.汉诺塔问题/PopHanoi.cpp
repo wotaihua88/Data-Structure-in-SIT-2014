@@ -15,6 +15,7 @@ PopHanoi::~PopHanoi()
 
 void PopHanoi::HanoiMenu()
 {
+	step = 1;
 	int size, i;
 	PopHanoi *a, *b, *c;
 	cout << "3.汉诺塔问题" << endl;

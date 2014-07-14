@@ -28,7 +28,7 @@ void Select::SelectSort(Select R[], int n)
 			R[i] = R[k];
 			R[k] = temp;
 		}
-		cout << "次数 " << i << " :";
+		cout << "次数 " << i + 1 << " :";
 		for (l = 0; l < n; l++){
 			cout << " " << R[l].key;
 		}
